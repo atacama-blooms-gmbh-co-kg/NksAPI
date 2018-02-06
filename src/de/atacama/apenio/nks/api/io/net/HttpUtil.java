@@ -20,47 +20,47 @@
  */
 package de.atacama.apenio.nks.api.io.net;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import de.atacama.apenio.nks.api.error.HttpException;
 import de.atacama.apenio.nks.api.error.NksException;
 
 public class HttpUtil {
 
-	private static final String CHARSET = StandardCharsets.UTF_8.name();
-
-	public static String post(String url, String data) {
+	public static String post(String url, String data, RequestSettings settings) {
 		int status;
 		try {
 			HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-			connection.setReadTimeout(10000);
+			/*connection.setReadTimeout(10000);
 			connection.setConnectTimeout(15000);
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("Accept-Charset", CHARSET);
-			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + CHARSET);
+			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + CHARSET);*/
+			settings.appendSettings(connection);
 
-			data = "data=" + URLEncoder.encode(data, CHARSET);
+			//data = URLEncoder.encode(data, settings.getCharset().name());
 
 			try (OutputStream output = connection.getOutputStream()) {
-				output.write(data.getBytes(CHARSET));
+				output.write(data.getBytes(settings.getCharset()));
 			}
 
 			status = connection.getResponseCode();
 
 			if (status == 200) {
 				InputStream response = connection.getInputStream();
-
-				try (Scanner scanner = new Scanner(response)) {
-					return scanner.useDelimiter("\\A").next();
-				}
+                BufferedReader in = new BufferedReader(new InputStreamReader(response, settings.getCharset()));
+                return in.lines().collect(Collectors.joining());
 			}
 		} catch (Exception ex) {
 			throw new NksException(ex);

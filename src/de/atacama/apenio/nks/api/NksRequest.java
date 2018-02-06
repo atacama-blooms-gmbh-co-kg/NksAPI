@@ -47,9 +47,9 @@ public class NksRequest {
 	 */
 	public static final NksRequest INSTANCE = new NksRequest();
 
-	private static final String SEARCH = "/search";
+	private static final String SEARCH = "/v2/search/";
 
-	private String url = "http://apenioapp02:19080/NksService/rest";
+	private String url = "http://te0001:22080/NksService/rest";
 
 	private NksRequest() {
 	}
