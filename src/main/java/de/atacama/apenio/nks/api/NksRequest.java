@@ -49,6 +49,10 @@ public class NksRequest {
 
 	private static final String SEARCH = "/v2/search/";
 
+	private static final String CATALOG =  "/v2/catalog/";
+
+    private static final String ACCESS =  "/v2/access/element";
+
 	private String url = "http://te0001:22080/NksService/rest";
 
 	private NksRequest() {
@@ -70,6 +74,14 @@ public class NksRequest {
 	public NksResponse search(QueryBuilder query) {
 		return request(query.create(), SEARCH);
 	}
+
+    public NksResponse catalog(QueryBuilder query) {
+        return request(query.create(), SEARCH);
+    }
+
+    public NksResponse access(QueryBuilder query) {
+        return request(query.create(), ACCESS);
+    }
 
 	/**
 	 * Vor dem Benutzen einer Funktion des NKS muss eine valide URL

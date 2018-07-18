@@ -60,6 +60,8 @@ public class NksQuery {
 	 */
 	private String text = "";
 
+	private String order;
+
 	/**
 	 * Optionale SessionID. Wird für den Sicherheitsmodus benutzt
 	 */
@@ -237,4 +239,7 @@ public class NksQuery {
 		return summary.toString();
 	}
 
+    public void setOrder(String str) {
+	    this.order = str;
+    }
 }

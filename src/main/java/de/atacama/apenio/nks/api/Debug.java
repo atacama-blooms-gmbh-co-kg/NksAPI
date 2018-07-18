@@ -35,7 +35,7 @@ public class Debug {
 		query.addSimpleConcept("PC1234");
 		query.setSearchText("unterstützen");
 
-		NksResponse response = NksRequest.INSTANCE.search(query);
+		NksResponse response = NksRequest.INSTANCE.access(query);
 		
 		System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
 		System.out.println("Results: " + response.size());
