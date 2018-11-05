@@ -21,6 +21,7 @@
 package de.atacama.apenio.nks.api;
 
 import com.google.gson.GsonBuilder;
+import de.atacama.apenio.nks.api.builder.Nks;
 
 public class Debug {
 
@@ -35,10 +36,11 @@ public class Debug {
 		query.addSimpleConcept("PC1234");
 		query.setSearchText("unterstützen");
 
-		NksResponse response = NksRequest.INSTANCE.access(query);
+		//NksResponse response = NksRequest.INSTANCE.access(query);
 		
-		System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
-		System.out.println("Results: " + response.size());
+		//System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
+		//System.out.println("Results: " + response.size());
+        NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().get().appliances().cName("IA123").list().execute();
 	}
 
 }

@@ -15,15 +15,9 @@ public class Executor {
 
     public Executor(Type type, String path)
     {
-        path = path;
-        type = type;
+        this.path = path;
+        this.type = type;
     }
-
-    public Executor()
-    {
-
-    }
-
     /// <summary>
     /// Gebe das gebaute Queryobjekt zurück
     /// </summary>

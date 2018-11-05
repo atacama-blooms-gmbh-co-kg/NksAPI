@@ -12,10 +12,6 @@ public class QueryBuilder extends Executor {
 
     //private NksQuery query = new NksQuery();
 
-    public QueryBuilder() {
-        query = new NksQuery();
-    }
-
     public QueryBuilder(Type type, String path) {
         super(type, path);
         query = new NksQuery();

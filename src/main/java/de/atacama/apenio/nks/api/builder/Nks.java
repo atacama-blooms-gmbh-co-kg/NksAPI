@@ -4,7 +4,7 @@ import de.atacama.apenio.nks.api.builder.rest.RestRequestBuilder;
 
 public class Nks {
 
-    private String path;
+    private String path = "";
 
     private Nks()
     {
