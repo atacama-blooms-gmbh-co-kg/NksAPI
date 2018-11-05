@@ -74,8 +74,9 @@ public class NksQuery {
 	private String metaContext;
 	private String hierarchy;
 	private int mode;
+    private boolean deprecated = false;
 
-	NksQuery() {
+    public NksQuery() {
 	}
 
 	public void addTarget(final NksEntry se) {
@@ -241,5 +242,9 @@ public class NksQuery {
 
     public void setOrder(String str) {
 	    this.order = str;
+    }
+
+    public void setDepricated(boolean b) {
+        this.deprecated = b;
     }
 }

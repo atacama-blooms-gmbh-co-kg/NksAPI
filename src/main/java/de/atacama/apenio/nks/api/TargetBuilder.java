@@ -52,7 +52,7 @@ public class TargetBuilder {
 		return this;
 	}
 
-	NksEntry create() {
+	public NksEntry create() {
 		return entry;
 	}
 

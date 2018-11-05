@@ -67,4 +67,32 @@ public class HttpUtil {
 		}
 		throw new HttpException(status);
 	}
+
+    public static String get(String url, RequestSettings settings) {
+        int status;
+        try {
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+			/*connection.setReadTimeout(10000);
+			connection.setConnectTimeout(15000);
+			connection.setDoOutput(true);
+			connection.setDoInput(true);
+			connection.setRequestMethod("POST");
+			connection.setRequestProperty("Accept-Charset", CHARSET);
+			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + CHARSET);*/
+            settings.appendSettings(connection);
+
+            //data = URLEncoder.encode(data, settings.getCharset().name());
+
+            status = connection.getResponseCode();
+
+            if (status == 200) {
+                InputStream response = connection.getInputStream();
+                BufferedReader in = new BufferedReader(new InputStreamReader(response, settings.getCharset()));
+                return in.lines().collect(Collectors.joining());
+            }
+        } catch (Exception ex) {
+            throw new NksException(ex);
+        }
+        throw new HttpException(status);
+    }
 }

@@ -71,6 +71,10 @@ public class NksEntry implements Serializable {
     protected NksEntry superTypeEntry;
     protected List<String> multiLabel = new ArrayList<>();
     protected Map<String, String> labelMap = new HashMap<>();
+    private String signature;
+    private String parentSignature;
+    private HashMap<Integer, HashSet<String>> shapes;
+    private List<String> shapeLabel;
 
 
     public NksEntry(String cName) {
@@ -225,5 +229,25 @@ public class NksEntry implements Serializable {
 
     public void setObjectRelation(Map<String, HashSet<String>> objectRelation) {
         this.objectRelation = objectRelation;
+    }
+
+    public void setScore(String s) {
+        this.score = s;
+    }
+
+    public void setSignature(String s) {
+        this.signature = s;
+    }
+
+    public void setParentSignature(String s) {
+        this.parentSignature = s;
+    }
+
+    public void setShapes(HashMap<Integer, HashSet<String>> integerHashSetHashMap) {
+        this.shapes = integerHashSetHashMap;
+    }
+
+    public void setShapeLabel(ArrayList<String> integers) {
+        this.shapeLabel = integers;
     }
 }
