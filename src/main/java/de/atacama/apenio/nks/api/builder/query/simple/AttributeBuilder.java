@@ -20,8 +20,8 @@ public class AttributeBuilder {
     public static String FEMALE = "WeiblichGeschlecht_";
 
     public AttributeBuilder(NksQuery query, SimpleQueryBuilder builder) {
-        query = query;
-        builder = builder;
+        this.query = query;
+        this.builder = builder;
     }
 
     /// <summary>

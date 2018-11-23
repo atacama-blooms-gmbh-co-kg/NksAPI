@@ -40,7 +40,7 @@ public class SimpleQueryBuilder extends Executor {
     public SimpleEntryBuilder<SimpleQueryBuilder> addConcept(String cName) {
         NksEntry entry = new NksEntry(cName);
         query.addConcept(entry);
-        return new SimpleEntryBuilder<SimpleQueryBuilder>(entry, this);
+        return new SimpleEntryBuilder<>(entry, this);
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public class SimpleQueryBuilder extends Executor {
         NksEntry entry = new NksEntry(cName);
         entry.setDom(domain);
         query.addConcept(entry);
-        return new SimpleEntryBuilder<SimpleQueryBuilder>(entry, this);
+        return new SimpleEntryBuilder<>(entry, this);
     }
 
     /// <summary>

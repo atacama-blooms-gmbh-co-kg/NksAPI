@@ -13,8 +13,8 @@ public class SimpleTemplateBuilder {
     private SimpleQueryBuilder builder;
 
     public SimpleTemplateBuilder(NksQuery query, SimpleQueryBuilder builder) {
-        entry = new NksEntry(BasicEntries.TEMPLATE);
-        builder = builder;
+        this.entry = new NksEntry(BasicEntries.TEMPLATE);
+        this.builder = builder;
         query.setTemplate(entry);
     }
 

@@ -8,8 +8,8 @@ public class SimpleEntryBuilder<T> {
     private T builder;
 
     public SimpleEntryBuilder(NksEntry entry, T builder) {
-        entry = entry;
-        builder = builder;
+        this.entry = entry;
+        this.builder = builder;
     }
 
     /// <summary>

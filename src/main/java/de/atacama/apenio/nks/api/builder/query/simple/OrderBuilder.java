@@ -7,8 +7,8 @@ public class OrderBuilder {
     private SimpleQueryBuilder _builder;
 
     public OrderBuilder(NksQuery query, SimpleQueryBuilder builder) {
-        query = query;
-        builder = builder;
+        this.query = query;
+        this._builder = builder;
     }
 
     /// <summary>

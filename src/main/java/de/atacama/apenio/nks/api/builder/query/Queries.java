@@ -11,8 +11,8 @@ public class Queries {
 
     public Queries(Type type, String path)
     {
-        type = type;
-        path = path;
+        this.type = type;
+        this.path = path;
     }
 
     /// <summary>
