@@ -14,7 +14,7 @@ public class GetBuilder {
     /// <summary>
     /// GET-Zugriff auf Interventionen
     /// </summary>
-    public TargetSetBuilder Interventions() {
+    public TargetSetBuilder interventions() {
         return new TargetSetBuilder(this.path + NksRestAttributes.INTERVENTIONS);
     }
 
