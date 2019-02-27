@@ -40,7 +40,10 @@ public class Debug {
 		
 		//System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
 		//System.out.println("Results: " + response.size());
-        NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().get().appliances().cName("IA123").list().execute();
+        //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().get().appliances().cName("IA123").execute();
+        NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addConcept("IA123").done().execute();
+        System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
+        System.out.println("Results: " + response.size());
 	}
 
 }
