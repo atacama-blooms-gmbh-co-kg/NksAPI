@@ -8,9 +8,8 @@ public class AccessBuilder {
 
     private static String path;
 
-    public AccessBuilder(String path)
-    {
-        path += path + NksRestAttributes.ACCESS;
+    public AccessBuilder(String pPath){
+        path = pPath + NksRestAttributes.ACCESS;
     }
 
     /// <summary>

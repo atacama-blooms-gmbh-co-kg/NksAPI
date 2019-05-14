@@ -11,8 +11,8 @@ public class SimpleTargetBuilder {
 
     public SimpleTargetBuilder(NksQuery query, SimpleQueryBuilder builder)
     {
-        query = query;
-        builder = builder;
+        this.query = query;
+        this.builder = builder;
     }
 
     /// <summary>
@@ -24,7 +24,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.ROOT);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.EXPERT_STANDARD);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -48,7 +48,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.INTERVENTIONS);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -60,7 +60,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.INTERVENTIONS_STRUCTURE);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -72,7 +72,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.INTERVENTIONS_BUNDLE);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -84,7 +84,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.SHAPES);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -96,7 +96,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.PHENOMENONS);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -108,7 +108,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.BODYLOCATIONS);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -120,7 +120,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.BODYLOCATIONS_STRUCTURE);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -132,7 +132,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.APPLIANCES);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -144,7 +144,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.APPLIANCES_STRUCTURE);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -156,7 +156,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.CAUSES);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -168,7 +168,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(BasicEntries.CAUSES_STRUCTURE);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>
@@ -181,7 +181,7 @@ public class SimpleTargetBuilder {
     {
         NksEntry entry = new NksEntry(cName);
         query.addTarget(entry);
-        return new SimpleEntryBuilder<SimpleTargetBuilder>(entry,this);
+        return new SimpleEntryBuilder<>(entry,this);
     }
 
     /// <summary>

@@ -239,6 +239,10 @@ public class NksEntry implements Serializable {
         this.signature = s;
     }
 
+    public String getSignature() {return this.signature; }
+
+    public String getParentSignature() {return this.parentSignature; }
+
     public void setParentSignature(String s) {
         this.parentSignature = s;
     }

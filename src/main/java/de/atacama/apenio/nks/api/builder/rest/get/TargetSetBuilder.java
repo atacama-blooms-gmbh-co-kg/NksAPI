@@ -1,5 +1,12 @@
 package de.atacama.apenio.nks.api.builder.rest.get;
 
+import de.atacama.apenio.nks.api.builder.NksRestAttributes;
+import de.atacama.apenio.nks.api.builder.Type;
+import de.atacama.apenio.nks.api.builder.rest.Executor;
+
+
+
+
 public class TargetSetBuilder {
 
     private String path;
@@ -20,5 +27,21 @@ public class TargetSetBuilder {
     /// </summary>
     public UidBuilder uri(String uid) {
         return new UidBuilder(this.path + "/" + uid);
+    }
+
+    /// <summary>
+    /// Erhalte Antwort als Baum
+    /// </summary>
+    public Executor tree()
+    {
+        return new Executor(Type.GET,this.path + NksRestAttributes.TREE);
+    }
+
+    /// <summary>
+    /// Erhalte Antwort als Liste
+    /// </summary>
+    public Executor list()
+    {
+        return new Executor(Type.GET,this.path + NksRestAttributes.LIST);
     }
 }

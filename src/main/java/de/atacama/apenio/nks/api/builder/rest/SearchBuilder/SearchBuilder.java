@@ -8,8 +8,8 @@ public class SearchBuilder {
     private String path;
 
     public SearchBuilder(String path) {
-        path = path;
-        path += NksRestAttributes.SEARCH;
+        this.path = path;
+        this.path += NksRestAttributes.SEARCH;
     }
 
     /// <summary>
