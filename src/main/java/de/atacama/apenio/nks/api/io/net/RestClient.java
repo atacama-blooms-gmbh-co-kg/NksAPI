@@ -34,10 +34,28 @@ public class RestClient {
     }
 
     public NksResponse request(NksQuery query, String url) {
+        //System.out.println(url);
     	NksResponse result;
     	String data = gson.toJson(query);
-    	String responseJson = HttpUtil.post(url, data);
+    	String responseJson = HttpUtil.post(url, data,RequestSettings.getStandardJsonSettings().asPOST());
     	result = gson.fromJson(responseJson, NksResponse.class);
+        return result;
+    }
+
+    public NksResponse post(NksQuery query, String url) {
+//        System.out.println(url);
+        NksResponse result;
+        String data = gson.toJson(query);
+        String responseJson = HttpUtil.post(url, data,RequestSettings.getStandardJsonSettings().asPOST());
+        result = gson.fromJson(responseJson, NksResponse.class);
+        return result;
+    }
+
+    public NksResponse get(String url) {
+//        System.out.println(url);
+        NksResponse result;
+        String responseJson = HttpUtil.get(url,RequestSettings.getStandardJsonSettings().asGET());
+        result = gson.fromJson(responseJson, NksResponse.class);
         return result;
     }
 }

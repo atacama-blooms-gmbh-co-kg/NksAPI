@@ -60,6 +60,8 @@ public class NksQuery {
 	 */
 	private String text = "";
 
+	private String order;
+
 	/**
 	 * Optionale SessionID. Wird für den Sicherheitsmodus benutzt
 	 */
@@ -72,8 +74,9 @@ public class NksQuery {
 	private String metaContext;
 	private String hierarchy;
 	private int mode;
+    private boolean deprecated = false;
 
-	NksQuery() {
+    public NksQuery() {
 	}
 
 	public void addTarget(final NksEntry se) {
@@ -237,4 +240,11 @@ public class NksQuery {
 		return summary.toString();
 	}
 
+    public void setOrder(String str) {
+	    this.order = str;
+    }
+
+    public void setDepricated(boolean b) {
+        this.deprecated = b;
+    }
 }
