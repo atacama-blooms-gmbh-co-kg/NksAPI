@@ -92,6 +92,11 @@ public class QueryBuilder {
 		return this;
 	}
 
+	public QueryBuilder setOrder(String str){
+	    query.setOrder(str);
+	    return this;
+    }
+
 	/**
 	 * Setzt den Text, der benutzt wird um nach Labels zu suchen.
 	 * @param text
@@ -121,11 +126,11 @@ public class QueryBuilder {
 	}
 
 	private void validate() {
-		for(NksEntry entry : query.getTargetSet()) {
+		/*for(NksEntry entry : query.getTargetSet()) {
 			if(entry.getStructures().size() == 0) {
 				throw new QueryException("As of now, every target of a query needs at least one structure.");
 			}
-		}
+		}*/
 	}
 
 }

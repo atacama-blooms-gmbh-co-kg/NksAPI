@@ -4,7 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.atacama.apenio.nks</groupId>
 	<artifactId>api</artifactId>
-	<version>0.2.0</version>
+	<version>0.4.0</version>
+    <packaging>jar</packaging>
 	
 	<build>
 		<plugins>
