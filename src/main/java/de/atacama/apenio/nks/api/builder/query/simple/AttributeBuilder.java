@@ -18,6 +18,7 @@ public class AttributeBuilder {
     public static String HIGHAGED = "HochaltrigeAlter_";
     public static String MALE = "MännlichGeschlecht_";
     public static String FEMALE = "WeiblichGeschlecht_";
+    public static String URGEND = "AkutPflege_";
 
     public AttributeBuilder(NksQuery query, SimpleQueryBuilder builder) {
         this.query = query;
@@ -121,6 +122,16 @@ public class AttributeBuilder {
     /// <returns>Sich selbst für chaining</returns>
     public AttributeBuilder female() {
         addAttribute(FEMALE);
+        return this;
+    }
+
+    /// <summary>
+    /// Füge das Attribut AkutPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst für chaining</returns>
+    public AttributeBuilder urgend() {
+        addAttribute(URGEND);
         return this;
     }
 

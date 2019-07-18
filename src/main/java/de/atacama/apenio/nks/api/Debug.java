@@ -20,8 +20,10 @@
  */
 package de.atacama.apenio.nks.api;
 
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.atacama.apenio.nks.api.builder.Nks;
+import de.atacama.apenio.nks.api.builder.query.simple.SimpleQueryBuilder;
 
 public class Debug {
 
@@ -42,21 +44,46 @@ public class Debug {
 		//System.out.println("Results: " + response.size());
 
         //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().get().appliances().cName("IA123").execute();
-        NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addConcept("IA123").done().execute();
-        System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
-        System.out.println("Results: " + response.size());
+        //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addConcept("IA123").done().execute();
+        //System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(response));
+        //System.out.println("Results: " + response.size());
+        /*Nks.newConnection("").prepareRequest().search().proposal().createSimpleQuery()
+                .addTargets()
+                    .causes()
+                        .addStructure("Test").addStructure("")
+                    .done()
+                    .bodyLocations()
+                    .done()
+                .done();*/
+        Gson gson = new Gson();
+        //SimpleQueryBuilder response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().list();
+        //System.out.println(gson.toJson(response.getQuery()));
+        SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().search().proposal().createSimpleQuery()
 
-        //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().get().appliances().cName("IA123").list().execute();
+                .addTargets()
+                .interventions().done()
+                .interventionsBundle().done()
+                .interventionsStructure().done()
+                .done()
+                .addAttributes()
+                .urgend()
+                .done()
+                .setSearchText("Inhalationen").setDepth(20).setMode(0);
+        System.out.println(gson.toJson(response.getQuery()));
+        System.out.println(gson.toJson(response.execute()));
+
+
+        //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().
 
 		//NksResponse response = Nks.newConnection("http://localhost:8080").prepareRequest().get().appliances().list().execute();
-		 response = Nks.newConnection("http://localhost:8080").prepareRequest().search()
+		/* response = Nks.newConnection("http://localhost:8080").prepareRequest().search()
 				.catalog()
 				.createSimpleQuery()
 				.addTargets()
 					.appliances().done()
 				.done()
 				.setSearchText("Pfeffer").execute();
-
+*/
 	}
 
 }

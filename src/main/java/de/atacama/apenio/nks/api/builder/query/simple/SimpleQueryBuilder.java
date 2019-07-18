@@ -37,8 +37,34 @@ public class SimpleQueryBuilder extends Executor {
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
     /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    @Deprecated
     public SimpleEntryBuilder<SimpleQueryBuilder> addConcept(String cName) {
         NksEntry entry = new NksEntry(cName);
+        query.addConcept(entry);
+        return new SimpleEntryBuilder<>(entry, this);
+    }
+
+    /// <summary>
+    /// Füge ein Element mittels seines cName der Konzeptmenge hinzu
+    ///
+    /// </summary>
+    /// <param name="cName">der cName oder auch Konzeptname</param>
+    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleQueryBuilder> addConceptByCName(String cName) {
+        NksEntry entry = new NksEntry(cName);
+        query.addConcept(entry);
+        return new SimpleEntryBuilder<>(entry, this);
+    }
+
+    /// <summary>
+    /// Füge ein Element mittels seines cName der Konzeptmenge hinzu
+    ///
+    /// </summary>
+    /// <param name="cName">der cName oder auch Konzeptname</param>
+    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleQueryBuilder> addConceptBySignature(String signature) {
+        NksEntry entry = new NksEntry();
+        entry.setSignature(signature);
         query.addConcept(entry);
         return new SimpleEntryBuilder<>(entry, this);
     }
@@ -128,7 +154,7 @@ public class SimpleQueryBuilder extends Executor {
     /// <param name="i">Modus als Integer</param>
     /// <returns>Sich selbst für chaining</returns>
     public SimpleQueryBuilder setMode(int i) {
-        query.setDepth(i);
+        query.setMode(i);
         return this;
     }
 
