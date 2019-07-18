@@ -58,19 +58,10 @@ public class Debug {
         Gson gson = new Gson();
         //SimpleQueryBuilder response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().list();
         //System.out.println(gson.toJson(response.getQuery()));
-        SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().search().proposal().createSimpleQuery()
-
-                .addTargets()
-                .interventions().done()
-                .interventionsBundle().done()
-                .interventionsStructure().done()
-                .done()
-                .addAttributes()
-                .urgend()
-                .done()
-                .setSearchText("Inhalationen").setDepth(20).setMode(0);
-        System.out.println(gson.toJson(response.getQuery()));
-        System.out.println(gson.toJson(response.execute()));
+        //SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().tree().setDepth(2);
+        NksResponse response = Nks.newConnection("http://localhost:8080").prepareRequest().get().interventions().cName("IA123").execute();
+        //System.out.println(gson.toJson(response.getQuery()));
+        System.out.println(gson.toJson(response));
 
 
         //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().

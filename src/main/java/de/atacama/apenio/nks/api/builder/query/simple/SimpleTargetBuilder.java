@@ -177,12 +177,43 @@ public class SimpleTargetBuilder {
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
     /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    @Deprecated
     public SimpleEntryBuilder<SimpleTargetBuilder> custom(String cName)
     {
         NksEntry entry = new NksEntry(cName);
         query.addTarget(entry);
         return new SimpleEntryBuilder<>(entry,this);
     }
+
+    /// <summary>
+    /// Füge Element mittels seines Konzeptnamens der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <param name="cName">der cName oder auch Konzeptname</param>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    @Deprecated
+    public SimpleEntryBuilder<SimpleTargetBuilder> conceptByCName(String cName)
+    {
+        NksEntry entry = new NksEntry(cName);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /// <summary>
+    /// Füge Element mittels seiner Signatur der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <param name="signature">die Signatur des Konzepts</param>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    @Deprecated
+    public SimpleEntryBuilder<SimpleTargetBuilder> conceptBySignature(String signature)
+    {
+        NksEntry entry = new NksEntry();
+        entry.setSignature(signature);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
 
     /// <summary>
     /// Beende das hinzufügen von Elementen zur Zielmenge
