@@ -191,7 +191,6 @@ public class SimpleTargetBuilder {
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
     /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
-    @Deprecated
     public SimpleEntryBuilder<SimpleTargetBuilder> conceptByCName(String cName)
     {
         NksEntry entry = new NksEntry(cName);
@@ -205,7 +204,6 @@ public class SimpleTargetBuilder {
     /// </summary>
     /// <param name="signature">die Signatur des Konzepts</param>
     /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
-    @Deprecated
     public SimpleEntryBuilder<SimpleTargetBuilder> conceptBySignature(String signature)
     {
         NksEntry entry = new NksEntry();

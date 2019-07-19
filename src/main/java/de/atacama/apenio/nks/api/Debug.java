@@ -58,10 +58,10 @@ public class Debug {
         Gson gson = new Gson();
         //SimpleQueryBuilder response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().list();
         //System.out.println(gson.toJson(response.getQuery()));
-        //SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().tree().setDepth(2);
-        NksResponse response = Nks.newConnection("http://localhost:8080").prepareRequest().get().interventions().cName("IA123").execute();
-        //System.out.println(gson.toJson(response.getQuery()));
-        System.out.println(gson.toJson(response));
+        SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().access().element().createSimpleQuery().addTargets().interventions().done().conceptBySignature("I1.12.8.17").done().done();
+        //NksResponse response = Nks.newConnection("http://localhost:8080").prepareRequest().get().interventions().cName("IA123").execute();
+        System.out.println(gson.toJson(response.getQuery()));
+        System.out.println(gson.toJson(response.execute()));
 
 
         //NksResponse response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().
