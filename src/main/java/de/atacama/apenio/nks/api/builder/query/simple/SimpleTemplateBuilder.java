@@ -259,4 +259,9 @@ public class SimpleTemplateBuilder {
         entry.setShapeLabel(new ArrayList<String>());
         return this;
     }
+
+    public SimpleTemplateBuilder setDeprecatedElements() {
+        entry.setDeprecated(true);
+        return this;
+    }
 }
