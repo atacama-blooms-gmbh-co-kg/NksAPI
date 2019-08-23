@@ -76,6 +76,18 @@ public class SimpleTargetBuilder {
     }
 
     /// <summary>
+    /// Füge Ordnungsstuktur der Interventionen-Bundles der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> interventionsBundleStructure()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.INTERVENTIONS_BUNDLE_STRUCTURE);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /// <summary>
     /// Füge Ausprägungen der Zielmenge hinzu
     ///
     /// </summary>
@@ -95,6 +107,18 @@ public class SimpleTargetBuilder {
     public SimpleEntryBuilder<SimpleTargetBuilder> phenomenons()
     {
         NksEntry entry = new NksEntry(BasicEntries.PHENOMENONS);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /// <summary>
+    /// Füge Strukturelemente der Phänomene der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> phenomenonsStructure()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.PHENOMENONS_STRUCTURE);
         query.addTarget(entry);
         return new SimpleEntryBuilder<>(entry,this);
     }
