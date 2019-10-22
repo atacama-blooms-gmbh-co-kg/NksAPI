@@ -1,0 +1,27 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+clone:
+  git:
+    image: plugins/git
+    tags: true
+
+
+steps:
+  - name: fetch
+    image: docker:git
+    commands:
+      - git fetch --tags
+
+  - name: build project
+    image: gradle:5.6.2-jdk8
+    commands:
+      - env
+      - gradle clean build publish -Dartifactory_user=$${USERNAME} -Dartifactory_pw=$${PASSWORD}
+    environment:
+      USERNAME:
+        from_secret: artifactory_user
+      PASSWORD:
+        from_secret: artifactory_pw
