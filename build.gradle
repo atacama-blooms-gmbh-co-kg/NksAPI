@@ -46,6 +46,8 @@ repositories {
     maven {
         url = 'http://maven.corp.atacama.de:8081/artifactory/repo'
     }
+
+
 }
 
 dependencies {
@@ -71,6 +73,10 @@ publishing {
             }
         }
     }
-
-
+    
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
 }
