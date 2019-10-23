@@ -7,9 +7,17 @@ plugins {
 versioning {
     full = { scmInfo ->
         if ( scmInfo.tag == null || scmInfo.dirty) {
-            "${scmInfo.lastTag}-${scmInfo.abbreviated}-SNAPSHOT"
+            def v = "${scmInfo.lastTag}-${scmInfo.abbreviated}-SNAPSHOT"
+            if (v.startsWith("v"))
+                v = v.substring(1)
+            else
+                v
         } else {
-            "${scmInfo.tag}"
+            def v = "${scmInfo.tag}"
+            if (v.startsWith("v"))
+                v = v.substring(1)
+            else
+                v
         }
     }
 
@@ -64,9 +72,5 @@ publishing {
         }
     }
 
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
+
 }
