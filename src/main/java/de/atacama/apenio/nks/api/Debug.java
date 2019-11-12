@@ -23,6 +23,7 @@ package de.atacama.apenio.nks.api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.atacama.apenio.nks.api.builder.Nks;
+import de.atacama.apenio.nks.api.builder.query.simple.BasicEntries;
 import de.atacama.apenio.nks.api.builder.query.simple.SimpleQueryBuilder;
 
 public class Debug {
@@ -58,7 +59,7 @@ public class Debug {
         Gson gson = new Gson();
         //SimpleQueryBuilder response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().list();
         //System.out.println(gson.toJson(response.getQuery()));
-        SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().access().element().createSimpleQuery().addTargets().interventions().done().conceptBySignature("I1.12.8.17").done().done();
+        SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().access().element().createSimpleQuery().defineTemplate().structureTemplate().setDeprecatedElements().done().addTargets().interventions().done().done().addConceptByCName("IA123").done().setOrder().single().getDeprecatedElements();
         //NksResponse response = Nks.newConnection("http://localhost:8080").prepareRequest().get().interventions().cName("IA123").execute();
         System.out.println(gson.toJson(response.getQuery()));
         System.out.println(gson.toJson(response.execute()));

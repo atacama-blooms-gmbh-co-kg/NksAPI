@@ -18,7 +18,11 @@ public class AttributeBuilder {
     public static String HIGHAGED = "HochaltrigeAlter_";
     public static String MALE = "MännlichGeschlecht_";
     public static String FEMALE = "WeiblichGeschlecht_";
-    public static String URGEND = "AkutPflege_";
+    public static String AKUT = "AkutPflege_";
+    public static String LZ = "LangzeitPflege_";
+    public static String POP = "PopPflege_";
+    public static String C4C = "C4cPflege_";
+    public static String REHA = "RehaPflege_";
 
     public AttributeBuilder(NksQuery query, SimpleQueryBuilder builder) {
         this.query = query;
@@ -130,8 +134,48 @@ public class AttributeBuilder {
     ///
     /// </summary>
     /// <returns>Sich selbst für chaining</returns>
-    public AttributeBuilder urgend() {
-        addAttribute(URGEND);
+    public AttributeBuilder akut() {
+        addAttribute(AKUT);
+        return this;
+    }
+
+    /// <summary>
+    /// Füge das Attribut Langzeitpflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst für chaining</returns>
+    public AttributeBuilder lz() {
+        addAttribute(LZ);
+        return this;
+    }
+
+    /// <summary>
+    /// Füge das Attribut PopPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst für chaining</returns>
+    public AttributeBuilder pop() {
+        addAttribute(POP);
+        return this;
+    }
+
+    /// <summary>
+    /// Füge das Attribut C4cOPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst für chaining</returns>
+    public AttributeBuilder c4c() {
+        addAttribute(C4C);
+        return this;
+    }
+
+    /// <summary>
+    /// Füge das Attribut RehaPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst für chaining</returns>
+    public AttributeBuilder reha() {
+        addAttribute(REHA);
         return this;
     }
 
