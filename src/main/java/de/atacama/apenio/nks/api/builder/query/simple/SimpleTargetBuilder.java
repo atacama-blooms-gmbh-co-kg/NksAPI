@@ -196,6 +196,32 @@ public class SimpleTargetBuilder {
     }
 
     /// <summary>
+    /// Füge Ordnungsstuktur der ICD der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> icd()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.ICD);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /// <summary>
+    /// Füge Ordnungsstuktur der OPS der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> ops()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.OPS);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+
+
+    /// <summary>
     /// Füge Element mittels seines Konzeptnamens der Zielmenge hinzu
     ///
     /// </summary>

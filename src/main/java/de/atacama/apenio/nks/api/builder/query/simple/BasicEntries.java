@@ -18,4 +18,6 @@ public class BasicEntries {
     public static String CAUSES_STRUCTURE = "UrsachenStructure";
     public static String INTERVENTIONS_BUNDLE = "InterventionBundleOrdner";
     public static String INTERVENTIONS_BUNDLE_STRUCTURE = "InterventionBundleStructure";
+    public static String OPS = "OPS";
+    public static String ICD = "ICD";
 }
