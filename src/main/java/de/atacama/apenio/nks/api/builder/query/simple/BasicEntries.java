@@ -20,4 +20,11 @@ public class BasicEntries {
     public static String INTERVENTIONS_BUNDLE_STRUCTURE = "InterventionBundleStructure";
     public static String OPS = "OPS";
     public static String ICD = "ICD";
+    public static String OPS_ROOT = "OPS_ROOT";
+    public static String ICD_ROOT = "ICD_ROOT";
+    public static String INTERVENTION_ROOT = "OPS_ROOT";
+    public static String BODYLOCATION_ROOT = "ICD_ROOT";
+    public static String CAUSE_ROOT = "ICD_ROOT";
+    public static String APPLIANCE_ROOT = "ICD_ROOT";
+
 }

@@ -219,6 +219,72 @@ public class SimpleTargetBuilder {
         return new SimpleEntryBuilder<>(entry,this);
     }
 
+    /// <summary>
+    /// Füge OPS-Rootelement der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> opsRoot()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.OPS_ROOT);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /**
+     * Füge OPS-Rootelement der Zielmenge hinzu
+     * @return Aktuelle SimpleEntryBuilder instanz
+     */
+    public SimpleEntryBuilder<SimpleTargetBuilder> icdRoot()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.ICD_ROOT);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /**
+     * Füge Interventions-Rootelement der Zielmenge hinzu
+     * @return Aktuelle SimpleEntryBuilder instanz
+     */
+    public SimpleEntryBuilder<SimpleTargetBuilder> interventionRoot()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.INTERVENTION_ROOT);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /**
+     * Füge Ursachen-Rootelement der Zielmenge hinzu
+     * @return Aktuelle SimpleEntryBuilder instanz
+     */
+    public SimpleEntryBuilder<SimpleTargetBuilder> causeRoot()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.CAUSE_ROOT);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /**
+     * Füge Hilfsmittel-Rootelement der Zielmenge hinzu
+     * @return Aktuelle SimpleEntryBuilder instanz
+     */
+    public SimpleEntryBuilder<SimpleTargetBuilder> applianceRoot()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.APPLIANCE_ROOT);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /**
+     * Füge Körperort-Rootelement der Zielmenge hinzu
+     * @return Aktuelle SimpleEntryBuilder instanz
+     */
+    public SimpleEntryBuilder<SimpleTargetBuilder> bodyLocationRoot()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.BODYLOCATION_ROOT);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
 
 
     /// <summary>
