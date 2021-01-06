@@ -21,7 +21,7 @@ public class LongTermBuilder {
     }
 
     /// <summary>
-    /// Interventionsvorschl‰ge
+    /// Interventionsvorschl√§ge
     /// </summary>
     public Queries Intervention() {
         return new Queries(Type.POST, path + NksRestAttributes.INTERVENTION_PROPOSAL);

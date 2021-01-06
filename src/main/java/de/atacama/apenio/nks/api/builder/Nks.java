@@ -22,7 +22,7 @@ public class Nks {
 
 
     /// <summary>
-    /// Nksverbindung zum öffentlichen Server
+    /// Nksverbindung zum Ã¶ffentlichen Server
     /// </summary>
     public static Nks newConnection()
     {

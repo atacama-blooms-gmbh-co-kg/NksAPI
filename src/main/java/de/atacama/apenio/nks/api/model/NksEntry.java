@@ -24,8 +24,8 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * Repr‰sentiert ein Element aus dem semantischen Netz.
- * Je nach Auspr‰gung ein Konzept aus einem Katalog, einer 
+ * Repr√§sentiert ein Element aus dem semantischen Netz.
+ * Je nach Auspr√§gung ein Konzept aus einem Katalog, einer 
  * Klassifikation oder auch einen Begriff aus dem 
  * apenioNKS-Lexikon.
  * 
