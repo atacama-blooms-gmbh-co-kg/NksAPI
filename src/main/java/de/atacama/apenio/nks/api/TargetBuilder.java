@@ -24,7 +24,7 @@ import de.atacama.apenio.nks.api.model.NksEntry;
 
 /**
  * Erstellt eine Zielmenge anhand eines Konzeptnames.
- * Strukturen können hinzugefügt werden.
+ * Strukturen kÃ¶nnen hinzugefÃ¼gt werden.
  * 
  * @author Weert Stamm
  */
@@ -42,7 +42,7 @@ public class TargetBuilder {
 	}
 
 	/**
-	 * Durch Strukturen kann die Zielmenge weiter eingeschränkt werden. 
+	 * Durch Strukturen kann die Zielmenge weiter eingeschrÃ¤nkt werden. 
 	 * @param structure
 	 * 			der KonzeptName einer Struktur
 	 * @return eine Instanz zur Verkettung

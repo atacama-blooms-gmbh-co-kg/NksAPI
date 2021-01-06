@@ -14,29 +14,29 @@ public class SimpleQueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Füge ein oder mehrere Attribute dem Query hinzu
+    /// FÃ¼ge ein oder mehrere Attribute dem Query hinzu
     ///
     /// </summary>
-    /// <returns>AttributeBuilder in welchem ein oder mehrere Attribute gewählt werden können</returns>
+    /// <returns>AttributeBuilder in welchem ein oder mehrere Attribute gewÃ¤hlt werden kÃ¶nnen</returns>
     public AttributeBuilder addAttributes() {
         return new AttributeBuilder(query, this);
     }
 
     /// <summary>
-    /// Füge ein oder mehrere Elemente der Zielmenge hinzu
+    /// FÃ¼ge ein oder mehrere Elemente der Zielmenge hinzu
     ///
     /// </summary>
-    /// <returns>TargetBuilder in welchem ein oder mehrere Ziele gewählt werden können</returns>
+    /// <returns>TargetBuilder in welchem ein oder mehrere Ziele gewÃ¤hlt werden kÃ¶nnen</returns>
     public SimpleTargetBuilder addTargets() {
         return new SimpleTargetBuilder(query, this);
     }
 
     /// <summary>
-    /// Füge ein Element mittels seines cName der Konzeptmenge hinzu
+    /// FÃ¼ge ein Element mittels seines cName der Konzeptmenge hinzu
     ///
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
-    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufÃ¼gen</returns>
     @Deprecated
     public SimpleEntryBuilder<SimpleQueryBuilder> addConcept(String cName) {
         NksEntry entry = new NksEntry(cName);
@@ -45,11 +45,11 @@ public class SimpleQueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Füge ein Element mittels seines cName der Konzeptmenge hinzu
+    /// FÃ¼ge ein Element mittels seines cName der Konzeptmenge hinzu
     ///
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
-    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufÃ¼gen</returns>
     public SimpleEntryBuilder<SimpleQueryBuilder> addConceptByCName(String cName) {
         NksEntry entry = new NksEntry(cName);
         query.addConcept(entry);
@@ -57,11 +57,11 @@ public class SimpleQueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Füge ein Element mittels seines cName der Konzeptmenge hinzu
+    /// FÃ¼ge ein Element mittels seines cName der Konzeptmenge hinzu
     ///
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
-    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufÃ¼gen</returns>
     public SimpleEntryBuilder<SimpleQueryBuilder> addConceptBySignature(String signature) {
         NksEntry entry = new NksEntry();
         entry.setSignature(signature);
@@ -70,23 +70,23 @@ public class SimpleQueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Füge ein NksEntry der Konzeptmenge hinzu
+    /// FÃ¼ge ein NksEntry der Konzeptmenge hinzu
     ///
     /// </summary>
     /// <param name="entry">Nks Entry-Objekt</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder addConcept(NksEntry entry) {
         query.addConcept(entry);
         return this;
     }
 
     /// <summary>
-    /// Füge ein Element mittels seines cName und einer Domäne der Konzeptmenge hinzu
+    /// FÃ¼ge ein Element mittels seines cName und einer DomÃ¤ne der Konzeptmenge hinzu
     ///
     /// </summary>
     /// <param name="cName">der cName oder auch Konzeptname</param>
-    /// <param name="domain">die Domäne des Konzepts</param>
-    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufügen</returns>
+    /// <param name="domain">die DomÃ¤ne des Konzepts</param>
+    /// <returns>SimpleEntryBuilder um Strukturelemente etc. diesem Konzept hinzuzufÃ¼gen</returns>
     public SimpleEntryBuilder<SimpleQueryBuilder> addConcept(String cName, String domain) {
         NksEntry entry = new NksEntry(cName);
         entry.setDom(domain);
@@ -95,7 +95,7 @@ public class SimpleQueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Definiere mit Hilfe eines Builders das Template für die Objekte der Antwort der Anfrage an den Server
+    /// Definiere mit Hilfe eines Builders das Template fÃ¼r die Objekte der Antwort der Anfrage an den Server
     ///
     /// </summary>
     /// <returns>SimpleTemplateBuilder zur Definition eines Tamplates</returns>
@@ -108,7 +108,7 @@ public class SimpleQueryBuilder extends Executor {
     ///
     /// </summary>
     /// <param name="language">Sprachcode nach ISO 639-1 norm</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder setLanguage(String language) {
         query.setLang(language);
         return this;
@@ -119,7 +119,7 @@ public class SimpleQueryBuilder extends Executor {
     ///
     /// </summary>
     /// <param name="text">Suchtext als String</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder setSearchText(String text) {
         query.setText(text);
         return this;
@@ -130,7 +130,7 @@ public class SimpleQueryBuilder extends Executor {
     ///
     /// </summary>
     /// <param name="text">Kontext als String</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder setTextContext(String text) {
         query.setTextContext(text);
         return this;
@@ -141,7 +141,7 @@ public class SimpleQueryBuilder extends Executor {
     ///
     /// </summary>
     /// <param name="i">Tiefe als Integer</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder setDepth(int i) {
         query.setDepth(i);
         return this;
@@ -152,7 +152,7 @@ public class SimpleQueryBuilder extends Executor {
     ///
     /// </summary>
     /// <param name="i">Modus als Integer</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder setMode(int i) {
         query.setMode(i);
         return this;
@@ -162,7 +162,7 @@ public class SimpleQueryBuilder extends Executor {
     /// Definiere die Ordnung des Antwortobjekts der Anfrage
     /// Default = none
     /// </summary>
-    /// <returns>OderBuilder in welchem die Ordnung ausgewählt werden kann</returns>
+    /// <returns>OderBuilder in welchem die Ordnung ausgewÃ¤hlt werden kann</returns>
     public OrderBuilder setOrder() {
         return new OrderBuilder(query, this);
     }

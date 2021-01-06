@@ -48,14 +48,14 @@ public class SearchBuilder {
     }
 
     /// <summary>
-    /// Zugriff auf Vorschl‰ge
+    /// Zugriff auf Vorschl√§ge
     /// </summary>
     public Queries proposal() {
         return new Queries(Type.POST, path + NksRestAttributes.PROP);
     }
 
     /// <summary>
-    /// Zugriff auf Wortvorschl‰ge
+    /// Zugriff auf Wortvorschl√§ge
     /// </summary>
     public Queries wordProposal() {
         return new Queries(Type.POST, path + NksRestAttributes.WORD_PROP);

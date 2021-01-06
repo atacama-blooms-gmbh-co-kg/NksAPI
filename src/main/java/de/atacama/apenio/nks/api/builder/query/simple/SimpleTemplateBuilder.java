@@ -22,7 +22,7 @@ public class SimpleTemplateBuilder {
     /// Definiere Felder des StandardTemplates
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder defaultTemplate() {
         setLabel();
         setCategory();
@@ -36,10 +36,10 @@ public class SimpleTemplateBuilder {
     }
 
     /// <summary>
-    /// Definiere Felder des Templates für Phänomene
+    /// Definiere Felder des Templates fÃ¼r PhÃ¤nomene
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder phenomenonsTemplate() {
         setLabel();
         setCategory();
@@ -55,10 +55,10 @@ public class SimpleTemplateBuilder {
     }
 
     /// <summary>
-    /// Definiere Felder des Templates für Interventionen
+    /// Definiere Felder des Templates fÃ¼r Interventionen
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder interventionTemplate() {
         setLabel();
         setCategory();
@@ -76,10 +76,10 @@ public class SimpleTemplateBuilder {
     }
 
     /// <summary>
-    /// Definiere Felder des Templates für Structures
+    /// Definiere Felder des Templates fÃ¼r Structures
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder structureTemplate() {
         setLabel();
         setCategory();
@@ -94,10 +94,10 @@ public class SimpleTemplateBuilder {
     }
 
     /// <summary>
-    /// Schließe das Bearbeiten des Templates ab
+    /// SchlieÃŸe das Bearbeiten des Templates ab
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleQueryBuilder done() {
         return builder;
     }
@@ -106,7 +106,7 @@ public class SimpleTemplateBuilder {
     /// Definiere das Label im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setLabel() {
         entry.setLabel("");
         return this;
@@ -116,27 +116,27 @@ public class SimpleTemplateBuilder {
     /// Definiere die Kategorie im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setCategory() {
         entry.setCat("");
         return this;
     }
 
     /// <summary>
-    /// Definiere den Vorgängertypen im Template
+    /// Definiere den VorgÃ¤ngertypen im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setSuperType() {
         entry.setSuperType("");
         return this;
     }
 
     /// <summary>
-    /// Definiere die Domäne im Template
+    /// Definiere die DomÃ¤ne im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setDomain() {
         entry.setDom("");
         return this;
@@ -146,7 +146,7 @@ public class SimpleTemplateBuilder {
     /// Definiere den Score im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setScore() {
         entry.setScore("");
         return this;
@@ -156,7 +156,7 @@ public class SimpleTemplateBuilder {
     /// Definiere den ListIndex im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setListIndex() {
         entry.setListIndex(0);
         return this;
@@ -166,17 +166,17 @@ public class SimpleTemplateBuilder {
     /// Definiere die Signatur im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setSignature() {
         entry.setSignature("");
         return null;
     }
 
     /// <summary>
-    /// Definiere die Signatur des Vorgängers im Template
+    /// Definiere die Signatur des VorgÃ¤ngers im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setParentSignature() {
         entry.setParentSignature("");
         return null;
@@ -186,7 +186,7 @@ public class SimpleTemplateBuilder {
     /// Definiere die Structures im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setStructures() {
         entry.setStructures(new HashSet<String>());
         return this;
@@ -196,7 +196,7 @@ public class SimpleTemplateBuilder {
     /// Definiere die Datenrelationen im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setDataRelation() {
         entry.setDataRelation(new HashMap<>());
         return this;
@@ -206,7 +206,7 @@ public class SimpleTemplateBuilder {
     /// Definiere die Objektrelationen im Template
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setObjectRelation() {
         entry.setObjectRelation(new HashMap<>());
         return this;
@@ -217,7 +217,7 @@ public class SimpleTemplateBuilder {
     ///
     /// </summary>
     /// <param name="str">Name der Relation</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder addDataRelation(String str) {
         if (entry.getDataRelation() == null) {
             setDataRelation();
@@ -231,7 +231,7 @@ public class SimpleTemplateBuilder {
     ///
     /// </summary>
     /// <param name="str">Name der Relation</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder addObjectRelation(String str) {
         if (entry.getObjectRelation() == null) {
             setObjectRelation();
@@ -241,20 +241,20 @@ public class SimpleTemplateBuilder {
     }
 
     /// <summary>
-    /// Definiere Ausprägungen im Tempate
+    /// Definiere AusprÃ¤gungen im Tempate
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setShapes() {
         entry.setShapes(new HashMap<Integer, HashSet<String>>());
         return this;
     }
 
     /// <summary>
-    /// Definiere Label der Ausprägungen im Tempate
+    /// Definiere Label der AusprÃ¤gungen im Tempate
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleTemplateBuilder setShapeLabel() {
         entry.setShapeLabel(new ArrayList<String>());
         return this;

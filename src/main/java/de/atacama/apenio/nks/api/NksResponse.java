@@ -25,7 +25,7 @@ import java.util.*;
 import de.atacama.apenio.nks.api.model.NksEntry;
 
 /**
- * Beinhaltet das vollst‰ndige Resultat einer Anfrage an den NKS.
+ * Beinhaltet das vollst√§ndige Resultat einer Anfrage an den NKS.
  * Falls bei der Anfrage Fehler aufgetreten sind, werden diese
  * als Warning abgelegt.
  * 

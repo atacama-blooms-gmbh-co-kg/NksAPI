@@ -33,11 +33,11 @@ public class Debug {
 		query.setLanguage("de");
 		query.setSearchDepth(5);
 		query.addTarget(new TargetBuilder("InterventionOrdner").addStructure("AkutPflege_"));
-		query.addAttribute("MännlichGeschlecht_");
+		query.addAttribute("MÃ¤nnlichGeschlecht_");
 		query.addAttribute("HochaltrigeAlter_");
 		query.addSimpleConcept("UA1732");
 		query.addSimpleConcept("PC1234");
-		query.setSearchText("unterstützen");
+		query.setSearchText("unterstÃ¼tzen");
 
 		//NksResponse response = NksRequest.INSTANCE.access(query);
 		

@@ -13,22 +13,22 @@ public class SimpleEntryBuilder<T> {
     }
 
     /// <summary>
-    /// Setze die Domäne des Konzepts
+    /// Setze die DomÃ¤ne des Konzepts
     ///
     /// </summary>
-    /// <param name="domain">Name der Domäne</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <param name="domain">Name der DomÃ¤ne</param>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleEntryBuilder<T> setDomain(String domain) {
         entry.setDom(domain);
         return this;
     }
 
     /// <summary>
-    /// Füge ein Strukturelement dem Konzept hinzu
+    /// FÃ¼ge ein Strukturelement dem Konzept hinzu
     ///
     /// </summary>
     /// <param name="str">Name der Struktur</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public SimpleEntryBuilder<T> addStructure(String str) {
         entry.addStructure(str);
         return this;
@@ -38,7 +38,7 @@ public class SimpleEntryBuilder<T> {
     /// Beende Bearbeitung des Konzepts
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public T done() {
         return builder;
     }
