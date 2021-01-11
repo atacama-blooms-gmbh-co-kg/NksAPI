@@ -62,6 +62,10 @@ public class NksQuery {
 
 	private String order;
 
+	private Integer from;
+
+	private Integer size;
+
 	/**
 	 * Optionale SessionID. Wird fÃ¼r den Sicherheitsmodus benutzt
 	 */
@@ -247,4 +251,20 @@ public class NksQuery {
     public void setDepricated(boolean b) {
         this.deprecated = b;
     }
+
+	public Integer getFrom() {
+		return from;
+	}
+
+	public void setFrom(Integer from) {
+		this.from = from;
+	}
+
+	public Integer getSize() {
+		return size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+	}
 }
