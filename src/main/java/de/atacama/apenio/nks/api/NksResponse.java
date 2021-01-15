@@ -40,6 +40,8 @@ public class NksResponse implements Iterable<NksEntry> {
 
 	private List<NksEntry> folders = new ArrayList<>();
 
+	private Integer totalSize;
+
 	protected String requestFormat = FORMAT_JSON;
 
 	NksResponse() {
@@ -75,4 +77,11 @@ public class NksResponse implements Iterable<NksEntry> {
 		return warnings;
 	}
 
+	public Integer getTotalSize() {
+		return totalSize;
+	}
+
+	public void setTotalSize(Integer totalSize) {
+		this.totalSize = totalSize;
+	}
 }
