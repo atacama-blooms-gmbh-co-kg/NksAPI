@@ -59,7 +59,7 @@ public class Debug {
         Gson gson = new Gson();
         //SimpleQueryBuilder response = Nks.newConnection("http://apenioapp02:19080").prepareRequest().access().element().createSimpleQuery().addTargets().bodyLocations().done().done().setOrder().list();
         //System.out.println(gson.toJson(response.getQuery()));
-        SimpleQueryBuilder response = Nks.newConnection("http://localhost:8080").prepareRequest().access().element().createSimpleQuery().defineTemplate().structureTemplate().setDeprecatedElements().done().addTargets().interventions().done().done().addConceptByCName("IA123").done().setOrder().single().getDeprecatedElements();
+        SimpleQueryBuilder response = Nks.newConnection("http://192.168.0.144/nks/NksService").prepareRequest().access().element().createSimpleQuery().defineTemplate().structureTemplate().setDeprecatedElements().done().addTargets().interventions().done().done().addConceptByCName("IA123").done().setOrder().single().getDeprecatedElements();
         //NksResponse response = Nks.newConnection("http://localhost:8080").prepareRequest().get().interventions().cName("IA123").execute();
         System.out.println(gson.toJson(response.getQuery()));
         System.out.println(gson.toJson(response.execute()));
