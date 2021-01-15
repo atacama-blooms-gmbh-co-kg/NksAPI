@@ -171,4 +171,14 @@ public class SimpleQueryBuilder extends Executor {
         query.setDepricated(true);
         return this;
     }
+
+    public SimpleQueryBuilder setSize(int i){
+        query.setSize(i);
+        return this;
+    }
+
+    public SimpleQueryBuilder setFrom(int i){
+        query.setFrom(i);
+        return this;
+    }
 }
