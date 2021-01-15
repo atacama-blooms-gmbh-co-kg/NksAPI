@@ -10,14 +10,19 @@ public class AttributeBuilder {
     private SimpleQueryBuilder builder;
 
     public static String NEWBORN = "NeugeboreneAlter_";
-    public static String INFANT = "SäuglingAlter_";
+    public static String INFANT = "SÃ¤uglingAlter_";
     public static String CHILD = "KindAlter_";
     public static String JUVENILE = "JugendlicheAlter_";
     public static String ADULT = "ErwachseneAlter_";
-    public static String AGED = "ÄltereAlter_";
+    public static String AGED = "Ã„ltereAlter_";
     public static String HIGHAGED = "HochaltrigeAlter_";
-    public static String MALE = "MännlichGeschlecht_";
+    public static String MALE = "MÃ¤nnlichGeschlecht_";
     public static String FEMALE = "WeiblichGeschlecht_";
+    public static String AKUT = "AkutPflege_";
+    public static String LZ = "LangzeitPflege_";
+    public static String POP = "PopPflege_";
+    public static String C4C = "C4cPflege_";
+    public static String REHA = "RehaPflege_";
 
     public AttributeBuilder(NksQuery query, SimpleQueryBuilder builder) {
         this.query = query;
@@ -25,107 +30,157 @@ public class AttributeBuilder {
     }
 
     /// <summary>
-    /// Füge ein frei wählbares Attribut hinzu
+    /// FÃ¼ge ein frei wÃ¤hlbares Attribut hinzu
     ///
     /// </summary>
     /// <param name="attr">Name des Attribut als String</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     private void addAttribute(String attr) {
         query.addAttribute(new NksEntry(attr));
     }
 
     /// <summary>
-    /// Füge das Attribut Neuggeboren hinzu
+    /// FÃ¼ge das Attribut Neuggeboren hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder newborn() {
         addAttribute(NEWBORN);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Säugling hinzu
+    /// FÃ¼ge das Attribut SÃ¤ugling hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder infant() {
         addAttribute(INFANT);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Kind hinzu
+    /// FÃ¼ge das Attribut Kind hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder child() {
         addAttribute(CHILD);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Jugendlich hinzu
+    /// FÃ¼ge das Attribut Jugendlich hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder juvenile() {
         addAttribute(JUVENILE);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Erwachsen hinzu
+    /// FÃ¼ge das Attribut Erwachsen hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder adult() {
         addAttribute(ADULT);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Älter hinzu
+    /// FÃ¼ge das Attribut Ã„lter hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder aged() {
         addAttribute(AGED);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Hochaltrig hinzu
+    /// FÃ¼ge das Attribut Hochaltrig hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder highAged() {
         addAttribute(HIGHAGED);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Männlich hinzu
+    /// FÃ¼ge das Attribut MÃ¤nnlich hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder male() {
         addAttribute(MALE);
         return this;
     }
 
     /// <summary>
-    /// Füge das Attribut Weiblich hinzu
+    /// FÃ¼ge das Attribut Weiblich hinzu
     ///
     /// </summary>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public AttributeBuilder female() {
         addAttribute(FEMALE);
         return this;
     }
 
     /// <summary>
-    /// Beende das hinzufügen von Attributen
+    /// FÃ¼ge das Attribut AkutPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
+    public AttributeBuilder akut() {
+        addAttribute(AKUT);
+        return this;
+    }
+
+    /// <summary>
+    /// FÃ¼ge das Attribut Langzeitpflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
+    public AttributeBuilder lz() {
+        addAttribute(LZ);
+        return this;
+    }
+
+    /// <summary>
+    /// FÃ¼ge das Attribut PopPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
+    public AttributeBuilder pop() {
+        addAttribute(POP);
+        return this;
+    }
+
+    /// <summary>
+    /// FÃ¼ge das Attribut C4cOPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
+    public AttributeBuilder c4c() {
+        addAttribute(C4C);
+        return this;
+    }
+
+    /// <summary>
+    /// FÃ¼ge das Attribut RehaPflege hinzu
+    ///
+    /// </summary>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
+    public AttributeBuilder reha() {
+        addAttribute(REHA);
+        return this;
+    }
+
+    /// <summary>
+    /// Beende das hinzufÃ¼gen von Attributen
     ///
     /// </summary>
     /// <returns>Querybuilder zum weiteren Bearbeitung des Queries</returns>

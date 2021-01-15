@@ -27,8 +27,8 @@ import de.atacama.apenio.nks.api.model.NksEntry;
  * Dient zur Erstellung einer Anfrage an den NKS Server.
  * Dabei kann die Sprache der Anfrage (default: de),
  * die Suchtiefe und der Suchtext direkt angegeben werden.
- * Attribute und Konzepte können über den Konzeptnamen
- * eines Eintrages hinzugefügt werden.
+ * Attribute und Konzepte kÃ¶nnen Ã¼ber den Konzeptnamen
+ * eines Eintrages hinzugefÃ¼gt werden.
  * Um die Zielmenge zu bestimmen, kann ein TargetBuilder 
  * verwendet werden.
  * 
@@ -48,7 +48,7 @@ public class QueryBuilder {
 	/**
 	 * Bestimmt die Sprache der Suche
 	 * @param language
-	 * 			mögliche Angaben: de, en, fr
+	 * 			mÃ¶gliche Angaben: de, en, fr
 	 * @return eine Instanz zur Verkettung
 	 */
 	public QueryBuilder setLanguage(String language) {
@@ -57,7 +57,7 @@ public class QueryBuilder {
 	}
 
 	/**
-	 * Fügt der Anfrage ein einfaches Konzept über den Konzeptnamen
+	 * FÃ¼gt der Anfrage ein einfaches Konzept Ã¼ber den Konzeptnamen
 	 * hinzu.
 	 * @param conceptName
 	 * 			Der Konzeptname, wie im Semantischen Netz definiert.
@@ -69,7 +69,7 @@ public class QueryBuilder {
 	}
 
 	/**
-	 * Fügt der Anfrage ein Attribute über dessen Konzeptnamen
+	 * FÃ¼gt der Anfrage ein Attribute Ã¼ber dessen Konzeptnamen
 	 * hinzu.
 	 * @param conceptName
 	 * 			Der Konzeptname, wie im Semantischen Netz definiert.
@@ -81,10 +81,10 @@ public class QueryBuilder {
 	}
 
 	/**
-	 * Fügt der Anfragesuchmenge eine Menge hinzu.
+	 * FÃ¼gt der Anfragesuchmenge eine Menge hinzu.
 	 * @param targetBuilder
-	 * 			Ein TargetBuilder mit dem es möglich ist schnell eine Menge
-	 * 			für die Suchmenge zu erstellen
+	 * 			Ein TargetBuilder mit dem es mÃ¶glich ist schnell eine Menge
+	 * 			fÃ¼r die Suchmenge zu erstellen
 	 * @return eine Instanz zur Verkettung
 	 */
 	public QueryBuilder addTarget(TargetBuilder targetBuilder) {
@@ -109,8 +109,8 @@ public class QueryBuilder {
 	}
 
 	/**
-	 * Setzt die Tiefe der Response-Baumstruktur, Länge der nach Relevanz
-	 * sortierten Listen (z.B. Vorschläge, Suchergebnisse)
+	 * Setzt die Tiefe der Response-Baumstruktur, LÃ¤nge der nach Relevanz
+	 * sortierten Listen (z.B. VorschlÃ¤ge, Suchergebnisse)
 	 * @param depth
 	 * 			die Tiefe der Suchanfrage
 	 * @return eine Instanz zur Verkettung

@@ -24,8 +24,8 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * Repr‰sentiert ein Element aus dem semantischen Netz.
- * Je nach Auspr‰gung ein Konzept aus einem Katalog, einer 
+ * Repr√§sentiert ein Element aus dem semantischen Netz.
+ * Je nach Auspr√§gung ein Konzept aus einem Katalog, einer 
  * Klassifikation oder auch einen Begriff aus dem 
  * apenioNKS-Lexikon.
  * 
@@ -48,6 +48,11 @@ public class NksEntry implements Serializable {
     protected String evidence; //Bayes
     protected String score; //Wenn Entry Ergebnis einer Suche war, kann hier der Score eingetragen werden.
 
+    public boolean isDeprecated() {
+        return apenioStorno;
+    }
+
+    protected boolean apenioStorno;
     private List<String> abstracts;
 
     private String noxGrade;
@@ -75,6 +80,7 @@ public class NksEntry implements Serializable {
     private String parentSignature;
     private HashMap<Integer, HashSet<String>> shapes;
     private List<String> shapeLabel;
+
 
 
     public NksEntry(String cName) {
@@ -253,5 +259,9 @@ public class NksEntry implements Serializable {
 
     public void setShapeLabel(ArrayList<String> integers) {
         this.shapeLabel = integers;
+    }
+
+    public void setDeprecated(boolean b) {
+        this.apenioStorno = b;
     }
 }

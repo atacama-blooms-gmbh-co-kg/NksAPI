@@ -26,7 +26,7 @@ import java.util.Set;
 import de.atacama.apenio.nks.api.model.NksEntry;
 
 /**
- * Interne repr�sentation der Anfrage.
+ * Interne repräsentation der Anfrage.
  */
 public class NksQuery {
 
@@ -46,12 +46,12 @@ public class NksQuery {
 	private Set<NksEntry> targetSet = new HashSet<>();
 
 	/**
-	 * Patientenmerkmale, die die Suche begrenzen können
+	 * Patientenmerkmale, die die Suche begrenzen kÃ¶nnen
 	 */
 	private Set<NksEntry> attributes = new HashSet<>();
 
 	/**
-	 * Apeniocodes (Phenomäne, Interventionen, etc.) oder z.B. ICD-Diagnosen
+	 * Apeniocodes (PhenomÃ¤ne, Interventionen, etc.) oder z.B. ICD-Diagnosen
 	 */
 	private Set<NksEntry> combinatedConcept = new HashSet<>();
 
@@ -62,8 +62,12 @@ public class NksQuery {
 
 	private String order;
 
+	private Integer from;
+
+	private Integer size;
+
 	/**
-	 * Optionale SessionID. Wird für den Sicherheitsmodus benutzt
+	 * Optionale SessionID. Wird fÃ¼r den Sicherheitsmodus benutzt
 	 */
 	private String sessionID;
 
@@ -247,4 +251,20 @@ public class NksQuery {
     public void setDepricated(boolean b) {
         this.deprecated = b;
     }
+
+	public Integer getFrom() {
+		return from;
+	}
+
+	public void setFrom(Integer from) {
+		this.from = from;
+	}
+
+	public Integer getSize() {
+		return size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+	}
 }

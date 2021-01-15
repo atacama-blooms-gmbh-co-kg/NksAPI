@@ -16,14 +16,14 @@ public class TargetSetBuilder {
     }
 
     /// <summary>
-    /// GET-Zugriff auf Elemelent des Katalogs über seinen Konzept-Namen
+    /// GET-Zugriff auf Elemelent des Katalogs Ã¼ber seinen Konzept-Namen
     /// </summary>
     public UidBuilder cName(String cname) {
         return new UidBuilder(this.path + "/" + cname);
     }
 
     /// <summary>
-    /// GET-Zugriff auf Element des Katalogs über seine URI
+    /// GET-Zugriff auf Element des Katalogs Ã¼ber seine URI
     /// </summary>
     public UidBuilder uri(String uid) {
         return new UidBuilder(this.path + "/" + uid);

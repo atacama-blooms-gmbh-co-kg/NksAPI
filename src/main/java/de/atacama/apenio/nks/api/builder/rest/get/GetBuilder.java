@@ -19,21 +19,21 @@ public class GetBuilder {
     }
 
     /// <summary>
-    /// GET-Zugriff auf Ausprägungen
+    /// GET-Zugriff auf AusprÃ¤gungen
     /// </summary>
     public TargetSetBuilder shapes() {
         return new TargetSetBuilder(this.path + NksRestAttributes.SHAPES);
     }
 
     /// <summary>
-    /// GET-Zugriff auf Phänomene
+    /// GET-Zugriff auf PhÃ¤nomene
     /// </summary>
     public TargetSetBuilder phenomenons() {
         return new TargetSetBuilder(this.path + NksRestAttributes.PHENOMENONS);
     }
 
     /// <summary>
-    /// GET-Zugriff auf Körperorte
+    /// GET-Zugriff auf KÃ¶rperorte
     /// </summary>
     public TargetSetBuilder bodyLocations() {
         return new TargetSetBuilder(this.path + NksRestAttributes.BODYLOCATIONS);
@@ -54,14 +54,14 @@ public class GetBuilder {
     }
 
     /// <summary>
-    /// GET-Zugriff auf Elemelent des Katalogs über seinen Konzept-Namen
+    /// GET-Zugriff auf Elemelent des Katalogs Ã¼ber seinen Konzept-Namen
     /// </summary>
     public UidBuilder cName(String uid) {
         return new UidBuilder(this.path + "/" + uid);
     }
 
     /// <summary>
-    /// GET-Zugriff auf Element des Katalogs über seine URI
+    /// GET-Zugriff auf Element des Katalogs Ã¼ber seine URI
     /// </summary>
     public UidBuilder uri(String uid) {
         return new UidBuilder(this.path + "/" + uid);

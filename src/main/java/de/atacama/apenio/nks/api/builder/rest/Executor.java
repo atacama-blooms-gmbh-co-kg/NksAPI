@@ -19,7 +19,7 @@ public class Executor {
         this.type = type;
     }
     /// <summary>
-    /// Gebe das gebaute Queryobjekt zurück
+    /// Gebe das gebaute Queryobjekt zurÃ¼ck
     /// </summary>
     public NksQuery getQuery()
     {
@@ -32,7 +32,7 @@ public class Executor {
     }
 
     /// <summary>
-    /// Führe Anfrage an den Server durch
+    /// FÃ¼hre Anfrage an den Server durch
     /// </summary>
     public NksResponse execute()
     {

@@ -5,7 +5,7 @@ public class NksRestAttributes {
     //Remote
     public static String PUBLIC_SERVER = "http://nks.atacama.de";
 
-    public static String SERVICE_PATH = "/NksService/rest";
+    public static String SERVICE_PATH = "/rest";
 
     //V2
     public static String V2 = "/v2";

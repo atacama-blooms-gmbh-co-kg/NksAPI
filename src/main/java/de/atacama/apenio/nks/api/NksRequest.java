@@ -30,13 +30,13 @@ import de.atacama.apenio.nks.api.io.net.RestClient;
  * 
  * http://[Adresse]:[Port]/[Projektname]/rest
  * 
- * Für die Suche wird ein QueryBuilder verwendet, der es erleichtert eine
+ * FÃ¼r die Suche wird ein QueryBuilder verwendet, der es erleichtert eine
  * valide Anfrage an den Server zu stellen.
  * 
- * Das Rückgabeformat ist eine NksResponse.
+ * Das RÃ¼ckgabeformat ist eine NksResponse.
  * 
- * Die Methodem können außerdem Ausnahmen des Typs RuntimeException werfen.
- * Diese sollten für korrekte Fehlerbehandlung gefangen werden.
+ * Die Methodem kÃ¶nnen auÃŸerdem Ausnahmen des Typs RuntimeException werfen.
+ * Diese sollten fÃ¼r korrekte Fehlerbehandlung gefangen werden.
  * 
  * @author Weert Stamm
  */
@@ -61,14 +61,14 @@ public class NksRequest {
 	/**
 	 * Bietet Zugriff auf die semantische Suche (FindSem) des NKS.
 	 * Hier wird, wie in der offiziellen Schnittstellenbeschreibung angegeben,
-	 * eine Anfrage übergeben, die mit einem QueryBuilder erstellt wird.
+	 * eine Anfrage Ã¼bergeben, die mit einem QueryBuilder erstellt wird.
 	 * Wird keine Ausnahme geworfen, ist das Ergebnis ein NksResponse.
-	 * Darin enthalten sind evtl. Warnungen und die gefundenen Einträge.
+	 * Darin enthalten sind evtl. Warnungen und die gefundenen EintrÃ¤ge.
 	 * 
 	 * @param query
 	 * 			Die Anfrage als gesamter QueryBuilder
 	 * @return
-	 * 		Ein NksResponse Objekt, dass alle Daten des Ergebnisses enthält
+	 * 		Ein NksResponse Objekt, dass alle Daten des Ergebnisses enthÃ¤lt
 	 * @throws NksException, QueryException, HttpException
 	 */
 	public NksResponse search(QueryBuilder query) {

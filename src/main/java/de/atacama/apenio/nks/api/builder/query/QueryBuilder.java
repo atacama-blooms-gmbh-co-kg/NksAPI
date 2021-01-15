@@ -66,7 +66,7 @@ public class QueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Rückgabetyp
+    /// RÃ¼ckgabetyp
     /// </summary>
     public QueryBuilder setOrder(String str){
         query.setOrder(str);
@@ -74,10 +74,10 @@ public class QueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Fügt ein einfaches Konzept über den Namen hinzu
+    /// FÃ¼gt ein einfaches Konzept Ã¼ber den Namen hinzu
     /// </summary>
     /// <param name="conceptName">der cName bzw Konzeptname</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public QueryBuilder addSimpleConcept(String conceptName) {
         query.addAttribute(new NksEntry(conceptName));
         return this;
@@ -89,21 +89,21 @@ public class QueryBuilder extends Executor {
     }
 
     /// <summary>
-    /// Fügt ein Attribut über den Konzeptnamen hinzu.
+    /// FÃ¼gt ein Attribut Ã¼ber den Konzeptnamen hinzu.
     ///
     /// </summary>
     /// <param name="conceptName">der cName oder auch Konzeptname</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public QueryBuilder addAttribute(String conceptName) {
         query.addAttribute(new NksEntry(conceptName));
         return this;
     }
 
     /// <summary>
-    /// Fügt der Anfrage eine Zielmengenbegrenzung hinzu
+    /// FÃ¼gt der Anfrage eine Zielmengenbegrenzung hinzu
     /// </summary>
-    /// <param name="targetBuilder">Eine Begrenzung der Zielmenge über ein <see cref="TargetBuilder"/> Objekt</param>
-    /// <returns>Sich selbst für chaining</returns>
+    /// <param name="targetBuilder">Eine Begrenzung der Zielmenge Ã¼ber ein <see cref="TargetBuilder"/> Objekt</param>
+    /// <returns>Sich selbst fÃ¼r chaining</returns>
     public QueryBuilder addTarget(TargetBuilder targetBuilder) {
         query.addTarget(targetBuilder.create());
         return this;

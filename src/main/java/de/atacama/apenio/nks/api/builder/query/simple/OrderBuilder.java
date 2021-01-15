@@ -30,4 +30,9 @@ public class OrderBuilder {
         query.setOrder("list");
         return _builder;
     }
+
+    public SimpleQueryBuilder single(){
+        query.setOrder("single");
+        return _builder;
+    }
 }
