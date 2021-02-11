@@ -19,7 +19,9 @@ public class BasicEntries {
     public static String INTERVENTIONS_BUNDLE = "InterventionBundleOrdner";
     public static String INTERVENTIONS_BUNDLE_STRUCTURE = "InterventionBundleStructure";
     public static String OPS = "OPS";
+    public static String OPS_FOLDER = "OPSFolder";
     public static String ICD = "ICD";
+    public static String ICD_FOLDER = "ICDFolder";
     public static String OPS_ROOT = "OPSRoot";
     public static String ICD_ROOT = "ICDRoot";
     public static String INTERVENTION_ROOT = "InterventionRoot";

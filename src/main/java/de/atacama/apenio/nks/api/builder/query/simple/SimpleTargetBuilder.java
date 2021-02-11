@@ -208,6 +208,18 @@ public class SimpleTargetBuilder {
     }
 
     /// <summary>
+    /// Füge Ordnungsstuktur der ICD der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> icdFolder()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.ICD_FOLDER);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /// <summary>
     /// Füge Ordnungsstuktur der OPS der Zielmenge hinzu
     ///
     /// </summary>
@@ -215,6 +227,18 @@ public class SimpleTargetBuilder {
     public SimpleEntryBuilder<SimpleTargetBuilder> ops()
     {
         NksEntry entry = new NksEntry(BasicEntries.OPS);
+        query.addTarget(entry);
+        return new SimpleEntryBuilder<>(entry,this);
+    }
+
+    /// <summary>
+    /// Füge Ordnungsstuktur der OPS der Zielmenge hinzu
+    ///
+    /// </summary>
+    /// <returns>EntryBuilder um gegebenenfalls Strukturelemente dem Ziel hinzuzufügen</returns>
+    public SimpleEntryBuilder<SimpleTargetBuilder> opsFolder()
+    {
+        NksEntry entry = new NksEntry(BasicEntries.OPS_FOLDER);
         query.addTarget(entry);
         return new SimpleEntryBuilder<>(entry,this);
     }
