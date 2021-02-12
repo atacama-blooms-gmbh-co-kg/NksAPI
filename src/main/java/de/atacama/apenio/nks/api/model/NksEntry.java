@@ -109,6 +109,10 @@ public class NksEntry implements Serializable {
     // GETTER + SETTER //
     //#################//
 
+    public Map<String, String> getLabelMap() {
+        return labelMap;
+    }
+
     public String getType() {
         return type;
     }
