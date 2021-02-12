@@ -15,7 +15,7 @@ public class BasicEntries {
     public static String TEMPLATE = "template";
     public static String BODYLOCATIONS_STRUCTURE = "KoerperStructure";
     public static String APPLIANCES_STRUCTURE = "HilfsmittelStructure";
-    public static String CAUSES_STRUCTURE = "UrsachenStructure";
+    public static String CAUSES_STRUCTURE = "UrsacheStructure";
     public static String INTERVENTIONS_BUNDLE = "InterventionBundleOrdner";
     public static String INTERVENTIONS_BUNDLE_STRUCTURE = "InterventionBundleStructure";
     public static String OPS = "OPS";
